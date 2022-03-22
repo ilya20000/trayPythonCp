@@ -1,0 +1,11 @@
+[global]
+daemonize = no
+
+[www]
+pm=ondemand
+pm.max_children=5
+pm.max_requests=500
+listen = /run/php7-fpm.sock
+listen.mode = 0666 
+user=nobody
+group=nobody

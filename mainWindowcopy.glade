@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkListStore" id="domiansListStore">
+    <columns>
+      <!-- column-name NameDomian -->
+      <column type="gchar"/>
+      <!-- column-name SoftType -->
+      <column type="gchar"/>
+      <!-- column-name Path -->
+      <column type="gchar"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0">s</col>
+        <col id="1">a</col>
+        <col id="2">d</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="windowSettings">
+    <property name="width_request">440</property>
+    <property name="height_request">370</property>
+    <property name="can_focus">False</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="default_width">440</property>
+    <property name="default_height">370</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkNotebook" id="notebook">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <child>
+          <object class="GtkFixed">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkTreeView" id="domiansListView">
+                <property name="name">domiansListView</property>
+                <property name="width_request">222</property>
+                <property name="height_request">331</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="headers_clickable">False</property>
+                <property name="search_column">0</property>
+                <property name="fixed_height_mode">True</property>
+                <property name="enable_grid_lines">both</property>
+                <property name="enable_tree_lines">True</property>
+                <property name="activate_on_single_click">True</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn">
+                    <property name="sizing">fixed</property>
+                    <property name="title" translatable="yes">Domian</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="cellrenderertextNameDomian"/>
+                      <attributes>
+                        <attribute name="text">0</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn">
+                    <property name="sizing">fixed</property>
+                    <property name="title" translatable="yes">SoftType</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="callrendertextSoftType"/>
+                      <attributes>
+                        <attribute name="text">1</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn">
+                    <property name="sizing">fixed</property>
+                    <property name="title" translatable="yes">Path</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="callrendertextPath"/>
+                      <attributes>
+                        <attribute name="text">2</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="x">5</property>
+                <property name="y">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="inputDomianName">
+                <property name="width_request">205</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="x">231</property>
+                <property name="y">32</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="width_request">158</property>
+                <property name="height_request">25</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">start</property>
+                <property name="label" translatable="yes">Input domian name</property>
+                <property name="ellipsize">start</property>
+                <property name="single_line_mode">True</property>
+                <property name="xalign">0</property>
+              </object>
+              <packing>
+                <property name="x">232</property>
+                <property name="y">10</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="width_request">202</property>
+                <property name="height_request">25</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Select Soft for domian</property>
+                <property name="xalign">0</property>
+              </object>
+              <packing>
+                <property name="x">231</property>
+                <property name="y">70</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkComboBoxText" id="selectDomianSoft">
+                <property name="width_request">205</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="active_id">0</property>
+                <items>
+                  <item id="0" translatable="yes">Nginx+phpfpm</item>
+                  <item id="1" translatable="yes">Apache(fastcgi)</item>
+                  <item id="apache+nginx" translatable="yes">Apache(fastcgi)+Nginx</item>
+                </items>
+              </object>
+              <packing>
+                <property name="x">231</property>
+                <property name="y">91</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="width_request">205</property>
+                <property name="height_request">25</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Select path for domian files</property>
+                <property name="xalign">0</property>
+              </object>
+              <packing>
+                <property name="x">231</property>
+                <property name="y">133</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFileChooserButton" id="inputFolderPath">
+                <property name="width_request">205</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="action">select-folder</property>
+                <property name="title" translatable="yes"/>
+              </object>
+              <packing>
+                <property name="x">230</property>
+                <property name="y">154</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnAdd">
+                <property name="label" translatable="yes">Add</property>
+                <property name="width_request">101</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="btnAdd_clicked" object="windowSettings" swapped="no"/>
+              </object>
+              <packing>
+                <property name="x">231</property>
+                <property name="y">212</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="label" translatable="yes">Save</property>
+                <property name="width_request">101</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="x">231</property>
+                <property name="y">249</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="label" translatable="yes">Delete</property>
+                <property name="width_request">101</property>
+                <property name="height_request">32</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="x">231</property>
+                <property name="y">285</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel" id="pageDomians">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Domians</property>
+          </object>
+          <packing>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFixed">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">page 2</property>
+          </object>
+          <packing>
+            <property name="position">1</property>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFixed">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">page 3</property>
+          </object>
+          <packing>
+            <property name="position">2</property>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
